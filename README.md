@@ -1,4 +1,4 @@
-# EQBench
+# SocialBench
 
 Small harness for running a LangChain-powered extraction chain against a prompt and returning structured output via Pydantic models.
 
