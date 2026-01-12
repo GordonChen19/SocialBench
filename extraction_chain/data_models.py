@@ -176,15 +176,3 @@ class ComprehensionLayer(BaseModel):
 
 class ResponseLayer(BaseModel):
     pass
-
-
-# --- Top Level Model ---
-
-class SocialEventAnalysis(BaseModel):
-    """
-    Top-level container for the Social IQ Analysis of a video scene.
-    """
-    scene_id: str = Field(description="Unique identifier for the video scene.") 
-    perception_layer: PerceptionLayer
-    comprehension_layer: ComprehensionLayer
-    # response_layer: ResponseLayer
