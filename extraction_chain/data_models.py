@@ -91,24 +91,18 @@ class CommunicativeIntent(BaseModel):
         description="What is the high-level purpose of this communicative act?")
     
     intent_causal_reasoning: str = Field(
-        description="Detailed explanation of WHY the speaker is pursuing this intent."
+        description="Detailed explanation of why the Agent is pursuing this intent."
     )
     
-    rationale_description: str = Field(
-        description="Detailed explanation. (e.g., 'Agent A used sarcasm to vent anger (Expressive) while maintaining the option to say 'I was just joking' if Agent B got aggressive (Deniability)')."
-    )
-
-  
-    primary_goal: str = Field(
-        description="If this interaction were a game, what is the 'winning condition' for the speaker? (e.g., 'To make the listener feel guilty', 'To get the salt', 'To signal superior status')."
-    )
+    # rationale_description: str = Field(
+    #     description="Detailed explanation. (e.g., 'Agent A used sarcasm to vent anger (Expressive) while maintaining the option to say 'I was just joking' if Agent B got aggressive (Deniability)')."
+    # )
 
 class RelationshipContext(BaseModel):
     """
     Analyzes the static bond between the agents *before* the current interaction starts.
     """
 
-    # --- A. THE STRUCTURE (MCQ Safe) ---
     relationship_type: dt.RelationshipCategory = Field(
         description="What is the official label for this relationship? (e.g., Is this a work meeting or a family dinner?)"
     )
@@ -147,7 +141,6 @@ class EmotionContext(BaseModel):
     Analyzes the agent's internal state and external display.
     """
 
-    # --- A. THE EXPERIENCE (Internal) ---
     felt_emotion: dt.EmotionCategory = Field(
         description="What the agent is genuinely feeling inside, regardless of what they show."
     )
@@ -160,7 +153,6 @@ class EmotionContext(BaseModel):
         description="Is this feeling pleasant or painful?"
     )
 
-    # --- B. THE DISPLAY (External) ---
     displayed_emotion: dt.EmotionCategory = Field(
         description="What emotion is the agent showing to the world? (May differ from Felt Emotion)."
     )
@@ -169,18 +161,8 @@ class EmotionContext(BaseModel):
         description="Is the agent faking, hiding, or exaggerating this emotion? (e.g., 'Smiling through the pain' = Masked)."
     )
 
-    # --- C. THE TRIGGER (Causal Link) ---
     trigger_event: str = Field(
-        description="What specific event, word, or thought caused this emotion? (e.g., 'Agent B's insult', 'The realization that the deadline passed')."
-    )
-    
-    target_object: str = Field(
-        description="Who or what is this emotion directed at? (e.g., 'Directed at Self' (Shame), 'Directed at Agent B' (Anger))."
-    )
-
-    # --- D. THE COGNITIVE APPRAISAL (The Why) ---
-    appraisal_summary: str = Field(
-        description="Brief explanation of why the trigger led to this emotion. (e.g., 'Agent B's comment threatened Agent A's status, causing Anger')."
+        description="What specific event, word, or thought caused this emotion and why did the trigger lead to this emotion? (e.g., 'Agent B's insult', 'The realization that the deadline passed')."
     )
 
 class ComprehensionLayer(BaseModel):
@@ -205,4 +187,4 @@ class SocialEventAnalysis(BaseModel):
     scene_id: str = Field(description="Unique identifier for the video scene.") 
     perception_layer: PerceptionLayer
     comprehension_layer: ComprehensionLayer
-    response_layer: ResponseLayer
+    # response_layer: ResponseLayer

@@ -44,14 +44,6 @@ class FocusLevel(str, Enum):
     MODERATE_FOCUS = "Moderate Focus (Some Attention on Subject)"
     LOW_FOCUS = "Low Focus (Attention is Dispersed)"
 
-# class Directionality(str, Enum):
-#     ONE_TO_ONE = "One-to-One"
-#     ONE_TO_MANY = "One-to-Many"
-#     MANY_TO_MANY = "Many-to-Many"
-#     MANY_TO_ONE = "Many-to-One"
-#     PARALLEL = "No Direct Interaction (Parallel Activities)"
-#     CIRCULAR = "Circular Interaction (Round-Robin Style)"
-
 class Orientation(str, Enum):
     SOCIOPETAL = "Sociopetal (Encourages Interaction)"
     SOCIOFUGAL = "Sociofugal (Discourages Interaction)"
@@ -66,13 +58,6 @@ class NormEnforcementStrength(str, Enum):
     WEAK = "Weak (Rarely Enforced)"
     IMPLICIT = "Implicit (Socially Enforced)"
     STRONG = "Strong (Formally Enforced via Rules, Authority, Punishment)"
-
-# class SensoryProfile(str, Enum):
-#     OPTIMAL = "Optimal (High Visibility and Audibility)"
-#     IMPEDED_AUDIO = "Impeded Audio (Noisy Environment)"
-#     IMPEDED_VISUAL = "Impeded Visual (Low Light or Obstructions)"
-#     IMPAIRED = "Impaired (Both Audio and Visual Challenges)"
-#     OVERSTIMULATED = "Overstimulated (Chaotic Environment)"
 
 # class Temporality(str, Enum):
 #     TRANSIENT = "Transient (Short Duration Interaction)"
@@ -199,13 +184,6 @@ class SincerityMode(str, Enum):
     STRATEGIC = "Strategic (Instrumental, face-managed)"
     DECEPTIVE = "Deceptive (Intentionally misleading)"
     PERFORMATIVE = "Performative (Ritual / audience-facing)"
-
-# class PowerDirection(str, Enum):
-#     """The vector of social dominance relative to the target."""
-#     UPWARD = "Upward (Subordinate addressing Superior)"
-#     DOWNWARD = "Downward (Superior addressing Subordinate)"
-#     LATERAL = "Lateral (Peer to Peer)"
-#     UNDEFINED = "Undefined (Clear hierarchy not established)"
 
 #How much face-risk the speaker is willing to tolerate to achieve their communicative goal (Brown & Levinson)
 class PolitenessStrategy(str, Enum):

@@ -1,6 +1,6 @@
-from langchain.chains import TransformChain
-from langchain.output_parsers import OutputFixingParser, PydanticOutputParser
-from langchain.prompts import PromptTemplate
+# from langchain.chains import TransformChain
+from langchain_core.output_parsers import PydanticOutputParser
+from langchain_core.prompts import PromptTemplate
 from extraction_chain.image_perception import chat_completion
 
 

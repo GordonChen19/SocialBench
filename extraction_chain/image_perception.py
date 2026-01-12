@@ -1,12 +1,12 @@
 
-import OpenAI
+from openai import OpenAI
 from dotenv import load_dotenv
 import os
 load_dotenv()
 
 REASONING_API_KEY = os.getenv("OPENAI_API_KEY")
 
-client = OpenAI(REASONING_API_KEY)
+client = OpenAI(api_key=REASONING_API_KEY)
 
 def chat_completion(prompt, model="gpt-4o", role="user"):
 

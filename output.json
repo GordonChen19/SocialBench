@@ -1,0 +1,19 @@
+{
+    "permeability": "Closed (Private)",
+    "topology": "Centralized (Hub-and-Spoke, focus on single leader/object)",
+    "size_category": "Large Group (11+)",
+    "focus_level": "High Focus (All Eyes on Subject)",
+    "orientation": "Sociopetal (Encourages Interaction)",
+    "norm_constraint": "Tight (Strict Adherence)",
+    "norm_enforcement_strength": "Strong (Formally Enforced via Rules, Authority, Punishment)",
+    "turn_taking_regime": "Regulated (Formal turns, moderator-controlled)",
+    "interaction_density": "Sparse (Long pauses, infrequent turns, Single person speaking)",
+    "participation_access": "Role-Gated (Only specific roles may speak)",
+    "temporal_pressure": "High (Urgent, compressed interaction)",
+    "stakes_level": "High Stakes (Career / Safety / Legal / Life)",
+    "expected_valence": "Neutral (Objective, Unbiased)",
+    "verdict": {
+        "judgment": "Adherence",
+        "violations": null
+    }
+}
